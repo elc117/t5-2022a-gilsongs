@@ -2,7 +2,7 @@
 " Deep learning ou aprendizagem profunda baseia-se no machine learning para, a partir de uma grande quantidade de dados e após inúmeras camadas de processamento com algoritmos, conseguir que um computador aprenda por si mesmo e execute tarefas semelhantes às dos seres humanos, tais como a identificação de imagens, o reconhecimento de voz ou a realização de predições, de forma progressiva."  - [IBERDROLA](https://www.iberdrola.com/inovacao/deep-learning)
 
 ## OOP em Python
-Antes de introduzir o uso de Orientação a Objetos no Deep Learning em Python, precisamos saber como exatamente a linguagem por si só trabalha com OOP.
+Antes de introduzir o uso de Orientação a Objetos no Deep Learning em Python, precisamos saber como exatamente a linguagem por si só trabalha com o Paradigma.
 
 **Obs.:** Ao chegar aqui, imaginamos que você já tenha noções básicas sobre Orientação a Objeto num geral, logo não nos extenderemos neste sentido e iremos direto aos pontos:
 
