@@ -9,7 +9,8 @@ Antes de introduzir o uso de Orientação a Objetos no Deep Learning em Python, 
 
 ### Declaração de Classes:
 Para declarar uma classe em Python é bem simples:  
-```class PessoaFisica():
+```
+class PessoaFisica():
     # Atributos e métodos da classe
 ```
 No Python, todas as classes devem, por boas práticas, possuir nomes que comecem com letra maiúscula e, caso sejam compostos, a primeira letra de cada palavra deve ser maiúscula, o que chamamos de formato ``CamelCase``.
