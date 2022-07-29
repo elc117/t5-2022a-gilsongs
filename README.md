@@ -115,10 +115,9 @@ A principal característica da utilização de Orientação a Objetos em projeto
 ![ModelsIMG](ModelsIMG.png)
 
 Como podemos ver, cada arquivo corresponde a um modelo de Deep Learning diferente.
+Destes, utilizaremos o modelo [SimpleDLA](dla_simple.py), que encontramos em [Train CIFAR10 with PyTorch](https://github.com/kuangliu/pytorch-cifar) como exemplo.
 
-Utilizaremos o modelo [SimpleDLA](dla_simple.py), que encontramos em [Train CIFAR10 with PyTorch](https://github.com/kuangliu/pytorch-cifar) como exemplo:
-
-
+Ao isolarmos a classe principal de SimpleDLA:
 ```
 class SimpleDLA(nn.Module):
     def __init__(self, block=BasicBlock, num_classes=10):
@@ -135,14 +134,15 @@ class SimpleDLA(nn.Module):
         out = self.layer1(out)
 ...
 ```
-Logo na classe principal percebemos diversos elementos de Orientação a objetos no código:
-- A classe SimpleDLA (é a classe principal, que responde pelo modelo por si só);
+Podemos perceber diversos elementos de Orientação a objetos no código:
+- A classe acima (é a classe principal, que responde pelo modelo por si só);
 - Definição de construtor em ``def __init__...``
 - Herança de Classes na utilização de ``super(SimpleDLA, self).__init__()``, [Herança em Python](https://www.treinaweb.com.br/blog/utilizando-heranca-no-python); 
 - Instanciamento do Objeto Tree em ``self.layer3 = Tree(bl...``;
 - Definição de método em ``def forward(...``.
 
-Por fim, caso você tenha interesse em analisar o [código](dla_simple.py) como um todo, percebe-se a utilização de **Agregação**. A classe ``SimpleDLA`` instancia ``Tree`` que instancia ``Root``. 
+Ainda, há uma última observação importante. Caso você tenha interesse em analisar o [código](dla_simple.py) como um todo, percebe-se a presença de outro conceito importante do paradigma OOP: O uso de *Agregation*. A classe ``SimpleDLA`` instancia ``Tree`` que por sua vez instancia ``Root``. 
+
   
 ### Vantagens do uso de OOP
 - Melhor organização do código em projetos grandes;

@@ -74,9 +74,11 @@ class Tree(nn.Module):
         out = self.root([out1, out2])
         return out
 
-
+''' Classe principal do modelo '''
 class SimpleDLA(nn.Module):
+    '''Construtor'''
     def __init__(self, block=BasicBlock, num_classes=10):
+        '''Herança'''
         super(SimpleDLA, self).__init__()
         self.base = nn.Sequential(
             nn.Conv2d(3, 16, kernel_size=3, stride=1, padding=1, bias=False),
@@ -96,12 +98,14 @@ class SimpleDLA(nn.Module):
             nn.ReLU(True)
         )
 
+        '''Instanciamento'''
         self.layer3 = Tree(block,  32,  64, level=1, stride=1)
         self.layer4 = Tree(block,  64, 128, level=2, stride=2)
         self.layer5 = Tree(block, 128, 256, level=2, stride=2)
         self.layer6 = Tree(block, 256, 512, level=1, stride=2)
         self.linear = nn.Linear(512, num_classes)
 
+    '''Declaração de Métodos'''
     def forward(self, x):
         out = self.base(x)
         out = self.layer1(out)
