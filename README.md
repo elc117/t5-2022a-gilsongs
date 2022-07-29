@@ -1,7 +1,6 @@
 # Orientação a Objetos em Python e suas Aplicações no Deep Learning
 ## O que é Deep Learning
-"O deep learning ou aprendizagem profunda baseia-se no machine learning para, a partir de uma grande quantidade de dados e após inúmeras camadas de processamento com algoritmos, conseguir que um computador aprenda por si mesmo e execute tarefas semelhantes às dos seres humanos, tais como a identificação de imagens, o reconhecimento de voz ou a realização de predições, de forma progressiva."  
-- [IBERDROLA](https://www.iberdrola.com/inovacao/deep-learning)
+"O deep learning ou aprendizagem profunda baseia-se no machine learning para, a partir de uma grande quantidade de dados e após inúmeras camadas de processamento com algoritmos, conseguir que um computador aprenda por si mesmo e execute tarefas semelhantes às dos seres humanos, tais como a identificação de imagens, o reconhecimento de voz ou a realização de predições, de forma progressiva."  - [IBERDROLA](https://www.iberdrola.com/inovacao/deep-learning)
 
 ## OOP em Python
 Antes de introduzir o uso de Orientação a Objetos no Deep Learning em Python, precisamos saber como exatamente a linguagem por si só trabalha com OOP.
@@ -19,7 +18,8 @@ No Python, todas as classes devem, por boas práticas, possuir nomes que comecem
 Para declarar um construtor em Python basta definir o nome do atributo no método especial chamado ``__init__``, este método define o **construtor da classe**.  
 
 Para definir os atributos de uma classe em seu construtor, basta passá-los como parâmetro, como podemos ver abaixo:
-```class PessoaFisica:
+```
+class PessoaFisica:
     def __init__(self, nome, sexo, cpf):
         self.nome = nome
         self.sexo = sexo
@@ -29,14 +29,16 @@ Observe que o uso de ``self.atributo`` se parece com o uso de ``this.atributo`` 
 
 ### Instanciando Objetos:
 Parecido com Java, para instanciar um objeto em Python basta:
-```if __name__ == "__main__":
-        pessoa1 = PessoaFisica("João", "M", "123456")
+```
+if __name__ == "__main__":
+    pessoa1 = PessoaFisica("João", "M", "123456")
 ```
 
 ### Declarando Métodos:
 Um dos principais aspectos de qualquer linguagem é a declaração de Métodos/Funções para fazer o que precisamos dentro do nosso programa. Em Python não é diferente. Para **declarar um método** dentro de uma classe em Python é simples: 
 
-```class PessoaFisica:
+```
+class PessoaFisica:
     def __init__(self, nome, sexo, cpf, ativo):
         self.nome = nome
         self.sexo = sexo
@@ -59,7 +61,8 @@ Um dos pilares da OOP é o encapsulamento, e é claro que há implementação de
 
 #### Definir Atributo como Privado:
 Utilizamos dois underlines ``__`` antes do nome do atributo ou método: 
-```class Pessoa:
+```
+class PessoaFísica:
     def __init__(self, nome, sexo, cpf, ativo):
         ...
         self.__ativo = ativo
@@ -75,7 +78,8 @@ if __name__ == "__main__":
 ```
 
 Podemos utilizar Getters e Setters para modificar estes atributos, porém, os criadores da linguagem desenvolveram uma forma alternativa de fazer isso: as **Properties**.
-```class Pessoa:
+```
+class PessoaFísica:
     def __init__(self, nome, sexo, cpf, ativo):
         self.__nome = nome
         self.__sexo = sexo
