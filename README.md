@@ -107,7 +107,7 @@ A utilização continua a mesma, o que torna tudo mais limpo!
 ## Deep Learning e OOP
 Uma das áreas de maior interesse de quem vós escreve é o Machine Learning, o que se reflete diretamente no tema deste trabalho. Ao efetuar uma pesquisa **profunda** na internet, pude constatar que o uso de OOP é viável no desenvolvimento de modelos de Deep Learning em Python. Podemos ver a prática como uma alternativa às implementações normalmente utilizadas, e que até, em algumas situações, pode haver preferência por tal. 
 
-Neste tópico, venho mostrar um exemplo de modelo de Deep Learning que utiliza Orientação a Objetos em sua estrutura, e é treinado para Identificação de Objetos em imagens utilizando [CIFAR10](https://www.cs.toronto.edu/~kriz/cifar.html). Todos os modelos disponíveis (inclusive este) e mais detalhes sobre estão disponíveis em: [Train CIFAR10 with PyTorch](https://github.com/kuangliu/pytorch-cifar)
+Neste tópico, venho mostrar um exemplo de modelo de Deep Learning utilizado para **detecção de objetos em imagens**, que aplica **Orientação a Objetos** em sua estrutura. Todos os modelos disponíveis (inclusive este) e mais detalhes sobre estão disponíveis em: [Train CIFAR10 with PyTorch](https://github.com/kuangliu/pytorch-cifar)
 
 ### Exemplo de uso de OOP em modelos de Deep Learning
 A principal característica da utilização de Orientação a Objetos em projetos de Deep Learning é a transformação de cada modelo em Classes separadas em diferentes arquivos: 
