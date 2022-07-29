@@ -1,6 +1,6 @@
 # Orientação a Objetos em Python e suas Aplicações no Deep Learning
 ## O que é Deep Learning
-"O deep learning ou aprendizagem profunda baseia-se no machine learning para, a partir de uma grande quantidade de dados e após inúmeras camadas de processamento com algoritmos, conseguir que um computador aprenda por si mesmo e execute tarefas semelhantes às dos seres humanos, tais como a identificação de imagens, o reconhecimento de voz ou a realização de predições, de forma progressiva."  - [IBERDROLA](https://www.iberdrola.com/inovacao/deep-learning)
+" O deep learning ou aprendizagem profunda baseia-se no machine learning para, a partir de uma grande quantidade de dados e após inúmeras camadas de processamento com algoritmos, conseguir que um computador aprenda por si mesmo e execute tarefas semelhantes às dos seres humanos, tais como a identificação de imagens, o reconhecimento de voz ou a realização de predições, de forma progressiva."  - [IBERDROLA](https://www.iberdrola.com/inovacao/deep-learning)
 
 ## OOP em Python
 Antes de introduzir o uso de Orientação a Objetos no Deep Learning em Python, precisamos saber como exatamente a linguagem por si só trabalha com OOP.
@@ -51,7 +51,7 @@ class PessoaFisica:
         print("A pessoa foi desativada com sucesso")
 
 if __name__ == "__main__":
-    pessoa1 = Pessoa("João", "M", "123456", True)
+    pessoa1 = PessoaFisica("João", "M", "123456", True)
     pessoa1.desativar()
 ```
 
@@ -63,7 +63,7 @@ Um dos pilares da OOP é o encapsulamento, e é claro que há implementação de
 #### Definir Atributo como Privado:
 Utilizamos dois underlines ``__`` antes do nome do atributo ou método: 
 ```
-class PessoaFísica:
+class PessoaFisica:
     def __init__(self, nome, sexo, cpf, ativo):
         ...
         self.__ativo = ativo
@@ -73,14 +73,14 @@ class PessoaFísica:
         print("A pessoa foi desativada com sucesso")
 
 if __name__ == "__main__":
-    pessoa1 = Pessoa("João", "M", "123456", True)
+    pessoa1 = PessoaFisica("João", "M", "123456", True)
     pessoa1.desativar()
     print(pessoa1.ativo)
 ```
 
 Podemos utilizar Getters e Setters para modificar estes atributos, porém, os criadores da linguagem desenvolveram uma forma alternativa de fazer isso: as **Properties**.
 ```
-class PessoaFísica:
+class PessoaFisica:
     def __init__(self, nome, sexo, cpf, ativo):
         self.__nome = nome
         self.__sexo = sexo
@@ -96,7 +96,7 @@ class PessoaFísica:
         self.__nome = nome
 
 if __name__ == "__main__":
-    pessoa1 = Pessoa("João", "M", "123456", True)
+    pessoa1 = PessoaFisica("João", "M", "123456", True)
     # Utilizando properties
     pessoa1.nome = "José"
     print(pessoa1.nome)
