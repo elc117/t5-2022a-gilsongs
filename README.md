@@ -104,17 +104,53 @@ if __name__ == "__main__":
 A utilização continua a mesma, o que torna tudo mais limpo!
 
 
-
 ## Deep Learning e OOP
+Uma das áreas de maior interesse de quem vós fala é o Machine Learning, o que se reflete diretamente no tema deste trabalho. Ao efetuar uma pesquisa **profunda** na internet, pude constatar que o uso de OOP é viável no desenvolvimento de modelos de Deep Learning em Python. Podemos ver a prática como uma alternativa às implementações normalmente utilizadas, e que até, em algumas cituações, pode haver preferência por tal. Neste tópico, venho mostrar um exemplo de modelo de Deep Learning que utiliza Orientação a Objetos em sua estrutura, que é utilizado basicamente para Identificação de Objetos em imagens utilizando [CIFAR10](https://www.cs.toronto.edu/~kriz/cifar.html). Todos os modelos disponíveis (inclusive este) e mais detalhes sobre estão disponíveis em: [Train CIFAR10 with PyTorch](https://github.com/kuangliu/pytorch-cifar)
 
 ### Exemplo de uso de OOP em modelos de Deep Learning
+A principal característica da utilização de Orientação a Objetos em projetos de Deep Learning é a transformação de cada modelo em Classes separadas em diferentes arquivos: 
 
+![ModelsIMG](ModelsIMG.png)
+
+Como podemos ver, cada arquivo é um modelo de Deep Learning.
+
+Utilizaremos o modelo [SimpleDLA](dla_simple.py), que encontramos em [Train CIFAR10 with PyTorch](https://github.com/kuangliu/pytorch-cifar) como exemplo:
+
+
+```
+class SimpleDLA(nn.Module):
+    def __init__(self, block=BasicBlock, num_classes=10):
+        super(SimpleDLA, self).__init__()
+        self.base = nn.Sequential(
+            nn.Conv2d(3, 16, kernel_size=3, stride=1, padding=1, bias=False),
+            nn.BatchNorm2d(16),
+...
+        self.layer3 = Tree(block,  32,  64, level=1, stride=1)
+        self.layer4 = Tree(block,  64, 128, level=2, stride=2)
+
+    def forward(self, x):
+        out = self.base(x)
+        out = self.layer1(out)
+...
+```
+Logo na classe principal percebemos diversos elementos de Orientação a objetos no código:
+- A classe SimpleDLA (é a classe principal, que responde pelo modelo por si só);
+- Definição de construtor em ``def __init__...``
+- Herança de Classes na utilização de ``super(SimpleDLA, self).__init__()``, [Herança em Python](https://www.treinaweb.com.br/blog/utilizando-heranca-no-python); 
+- Instanciamento do Objeto Tree em ``self.layer3 = Tree(bl...``;
+- Definição de método em ``def forward(...``.
+
+Por fim, caso você tenha interesse em analisar o [código](dla_simple.py) como um todo, percebe-se a utilização de **Agregação**. A classe ``SimpleDLA`` instancia ``Tree`` que instancia ``Root``. 
+  
 ### Vantagens do uso de OOP
-### Desvantagens do uso de OOP
+- Melhor organização do código em projetos grandes;
+- Torna o código mais legível para outros programadores;
+- Torna mais fácil a transição entre diferentes modelos;
 
 ## Créditos
-https://www.youtube.com/watch?v=QQkUoE58QMA&ab_channel=ConnorShorten
-https://github.com/kuangliu/pytorch-cifar
-https://www.treinaweb.com.br/blog/orientacao-a-objetos-em-python#:~:text=No%20paradigma%20orientado%20%C3%A0%20objetos,constante%20no%20desenvolvimento%20de%20programas.&text=Como%20vimos%20acima%2C%20para%20declarar,seguido%20do%20nome%20desta%20classe.
+- [Object-Oriented Programming for Deep Learning](https://www.youtube.com/watch?v=QQkUoE58QMA&ab_channel=ConnorShorten)
+- [Train CIFAR10 with PyTorch](https://github.com/kuangliu/pytorch-cifar)
+- [Orientação a objetos em Python](https://www.treinaweb.com.br/blog/orientacao-a-objetos-em-python#:~:text=No%20paradigma%20orientado%20%C3%A0%20objetos,constante%20no%20desenvolvimento%20de%20programas.&text=Como%20vimos%20acima%2C%20para%20declarar,seguido%20do%20nome%20desta%20classe.)
+
 
 
