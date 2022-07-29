@@ -114,7 +114,7 @@ A principal característica da utilização de Orientação a Objetos em projeto
 
 ![ModelsIMG](ModelsIMG.png)
 
-Como podemos ver, cada arquivo é um modelo de Deep Learning.
+Como podemos ver, cada arquivo corresponde a um modelo de Deep Learning diferente.
 
 Utilizaremos o modelo [SimpleDLA](dla_simple.py), que encontramos em [Train CIFAR10 with PyTorch](https://github.com/kuangliu/pytorch-cifar) como exemplo:
 
