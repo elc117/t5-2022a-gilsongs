@@ -12,7 +12,7 @@ Para declarar uma classe em Python é bem simples:
 class PessoaFisica():
     # Atributos e métodos da classe
 ```
-No Python, todas as classes devem, por boas práticas, possuir nomes que comecem com letra maiúscula e, caso sejam compostos, a primeira letra de cada palavra deve ser maiúscula, o que chamamos de formato ``CamelCase``.
+No Python, todas as classes devem, por boas práticas, possuir nomes que **comecem com letra maiúscula** e, caso sejam compostos, a primeira letra de cada palavra deve ser maiúscula, o que chamamos de formato ``CamelCase``.
 
 ### Criando um Construtor:
 Para declarar um construtor em Python basta definir o nome do atributo no método especial chamado ``__init__``, este método define o **construtor da classe**.  
