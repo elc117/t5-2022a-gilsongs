@@ -141,7 +141,7 @@ Podemos perceber diversos elementos de Orientação a objetos no código:
 - Instanciamento do Objeto Tree em ``self.layer3 = Tree(bl...``;
 - Definição de método em ``def forward(...``.
 
-Ainda, há uma última observação importante. Caso você tenha interesse em analisar o [código](dla_simple.py) como um todo, percebe-se a presença de outro conceito importante do paradigma OOP: O uso de *Agregation*. A classe ``SimpleDLA`` instancia ``Tree`` que por sua vez instancia ``Root``. 
+Ainda, há uma última observação importante. Caso você tenha interesse em analisar o [código](dla_simple.py) como um todo, percebe-se a presença de outro conceito importante do paradigma OOP: O uso de *Aggregation*. A classe ``SimpleDLA`` instancia ``Tree`` que por sua vez instancia ``Root``. 
 
   
 ### Vantagens do uso de OOP
