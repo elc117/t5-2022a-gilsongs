@@ -57,7 +57,7 @@ if __name__ == "__main__":
 Para criar um método utilizamos a palavra reservada ``def`` seguido do nome da classe, nesse caso ``desativar``. Após isso é só definir o comportamente deste método. Neste caso estamos desativando a ``PessoaFisica`` em questão.
 
 ### Encapsulamento em Python
-Um dos pilares da OOP é o encapsulamento, e é claro que há implementação de tal pilar em Python. Porém ela aparece de forma um pouco diferente quando comparada a linguagens de paradigma totalmente voltado para OOP.
+Um dos pilares da OOP é o encapsulamento, e é claro que há implementação de tal pilar em Python. Porém ela aparece de forma um pouco diferente quando comparada a linguagens de paradigma totalmente voltado para OOP, como Java por exemplo.
 
 #### Definir Atributo como Privado:
 Utilizamos dois underlines ``__`` antes do nome do atributo ou método: 
@@ -77,7 +77,7 @@ if __name__ == "__main__":
     print(pessoa1.ativo)
 ```
 
-Podemos utilizar Getters e Setters para modificar estes atributos, porém, os criadores da linguagem desenvolveram uma forma alternativa de fazer isso: as **Properties**.
+Podemos utilizar **Getters** e **Setters** para modificar estes atributos, porém, os criadores da linguagem desenvolveram uma forma alternativa de fazer isso: as **Properties**.
 ```
 class PessoaFisica:
     def __init__(self, nome, sexo, cpf, ativo):
@@ -105,7 +105,7 @@ A utilização continua a mesma, o que torna tudo mais limpo!
 
 
 ## Deep Learning e OOP
-Uma das áreas de maior interesse de quem vós fala é o Machine Learning, o que se reflete diretamente no tema deste trabalho. Ao efetuar uma pesquisa **profunda** na internet, pude constatar que o uso de OOP é viável no desenvolvimento de modelos de Deep Learning em Python. Podemos ver a prática como uma alternativa às implementações normalmente utilizadas, e que até, em algumas cituações, pode haver preferência por tal. Neste tópico, venho mostrar um exemplo de modelo de Deep Learning que utiliza Orientação a Objetos em sua estrutura, que é utilizado basicamente para Identificação de Objetos em imagens utilizando [CIFAR10](https://www.cs.toronto.edu/~kriz/cifar.html). Todos os modelos disponíveis (inclusive este) e mais detalhes sobre estão disponíveis em: [Train CIFAR10 with PyTorch](https://github.com/kuangliu/pytorch-cifar)
+Uma das áreas de maior interesse de quem vós escreve é o Machine Learning, o que se reflete diretamente no tema deste trabalho. Ao efetuar uma pesquisa **profunda** na internet, pude constatar que o uso de OOP é viável no desenvolvimento de modelos de Deep Learning em Python. Podemos ver a prática como uma alternativa às implementações normalmente utilizadas, e que até, em algumas cituações, pode haver preferência por tal. Neste tópico, venho mostrar um exemplo de modelo de Deep Learning que utiliza Orientação a Objetos em sua estrutura, que é treinado para Identificação de Objetos em imagens utilizando [CIFAR10](https://www.cs.toronto.edu/~kriz/cifar.html). Todos os modelos disponíveis (inclusive este) e mais detalhes sobre estão disponíveis em: [Train CIFAR10 with PyTorch](https://github.com/kuangliu/pytorch-cifar)
 
 ### Exemplo de uso de OOP em modelos de Deep Learning
 A principal característica da utilização de Orientação a Objetos em projetos de Deep Learning é a transformação de cada modelo em Classes separadas em diferentes arquivos: 
