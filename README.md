@@ -171,7 +171,7 @@ class SimpleDLA(nn.Module):
 Podemos perceber diversos elementos de Orientação a objetos no código:
 - A classe acima (é a classe principal, que responde pelo modelo por si só);
 - Definição de construtor em ``def __init__...``
-- Herança de Classes na utilização de ``super(SimpleDLA, self).__init__()``, [Herança em Python](https://www.treinaweb.com.br/blog/utilizando-heranca-no-python); 
+- Herança de Classes na utilização de ``super(SimpleDLA, self).__init__()``; 
 - Instanciamento do Objeto Tree em ``self.layer3 = Tree(bl...``;
 - Definição de método em ``def forward(...``.
 
@@ -187,6 +187,7 @@ Ainda, há uma última observação importante. Caso você tenha interesse em an
 - [Object-Oriented Programming for Deep Learning](https://www.youtube.com/watch?v=QQkUoE58QMA&ab_channel=ConnorShorten)
 - [Train CIFAR10 with PyTorch](https://github.com/kuangliu/pytorch-cifar)
 - [Orientação a objetos em Python](https://www.treinaweb.com.br/blog/orientacao-a-objetos-em-python#:~:text=No%20paradigma%20orientado%20%C3%A0%20objetos,constante%20no%20desenvolvimento%20de%20programas.&text=Como%20vimos%20acima%2C%20para%20declarar,seguido%20do%20nome%20desta%20classe.)
+- [Herança em Python](https://www.treinaweb.com.br/blog/utilizando-heranca-no-python)
 
 
 
