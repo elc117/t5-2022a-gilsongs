@@ -103,6 +103,40 @@ if __name__ == "__main__":
 
 A utilização continua a mesma, o que torna tudo mais limpo!
 
+### Herança em Python
+Para utilizar a herança no Python é bem simples. Direto ao ponto, criar três classes para representar as entidades Animal, Gato e Cachorro.  
+```
+class Animal():
+    def __init__(self, nome, cor):
+        self.__nome = nome
+        self.__cor = cor
+
+    def comer(self):
+        print(f"O {self.__nome} está comendo")
+```
+No código acima definimos a classe pai que irá possuir todos os atributos e métodos comuns às classes filhas (Gato e Cachorro). 
+
+Agora definiremos as classe que herdarão características de Animal (no caso, Gato e Cachorro):
+```
+import animal
+
+class Gato(animal.Animal):
+    def __init__(self, nome, cor):
+        super().__init__(nome, cor)
+
+```
+```
+import animal
+
+class Cachorro(animal.Animal):
+    def __init__(self, nome, cor):
+        super().__init__(nome, cor)
+
+```
+
+Note que utilizamos ``super``, assim como em Java para repassar os dados de nome e cor para a classe Pai.  
+E a partir de agora, por herdar da classe Animal, as classes Gato e Cachorro podem, sem nenhuma alteração, utilizar o método comer(), definido na classe Animal.
+
 
 ## Deep Learning e OOP
 Uma das áreas de maior interesse de quem vós escreve é o Machine Learning, o que se reflete diretamente no tema deste trabalho. Ao efetuar uma pesquisa **profunda** na internet, pude constatar que o uso de OOP é viável no desenvolvimento de modelos de Deep Learning em Python. Podemos ver a prática como uma alternativa às implementações normalmente utilizadas, e que até, em algumas situações, pode haver preferência por tal. 
