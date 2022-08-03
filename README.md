@@ -104,7 +104,7 @@ if __name__ == "__main__":
 A utilização continua a mesma, o que torna tudo mais limpo!
 
 ### Herança em Python
-Para utilizar a herança no Python é bem simples. Direto ao ponto, criar três classes para representar as entidades Animal, Gato e Cachorro.  
+Para utilizar a herança no Python é bem simples. Direto ao ponto, vamos criar três classes para representar as entidades Animal, Gato e Cachorro.  
 ```
 class Animal():
     def __init__(self, nome, cor):
@@ -114,9 +114,8 @@ class Animal():
     def comer(self):
         print(f"O {self.__nome} está comendo")
 ```
-No código acima definimos a classe pai que irá possuir todos os atributos e métodos comuns às classes filhas (Gato e Cachorro). 
-
-Agora definiremos as classe que herdarão características de Animal (no caso, Gato e Cachorro):
+No código acima definimos a classe pai que irá possuir todos os atributos e métodos comuns às classes filhas (Gato e Cachorro).  
+Agora definiremos as classes que herdarão características de Animal (no caso, Gato e Cachorro):
 ```
 import animal
 
@@ -134,8 +133,9 @@ class Cachorro(animal.Animal):
 
 ```
 
-Note que utilizamos ``super``, assim como em Java para repassar os dados de nome e cor para a classe Pai.  
-E a partir de agora, por herdar da classe Animal, as classes Gato e Cachorro podem, sem nenhuma alteração, utilizar o método comer(), definido na classe Animal.
+Note que utilizamos ``super``, assim como em Java para repassar os dados de nome e cor para a classe Pai. Mas que **diferentemente** de Java, nós definimos a classe a ser herdada **colocando-a dentro dos parênteses** ao declarar o escopo da classe filha.  
+
+E a partir de agora, por herdar da classe Animal, as classes Gato e Cachorro podem, sem nenhuma alteração, utilizar o método ``comer()``, definido na classe Animal.
 
 
 ## Deep Learning e OOP
